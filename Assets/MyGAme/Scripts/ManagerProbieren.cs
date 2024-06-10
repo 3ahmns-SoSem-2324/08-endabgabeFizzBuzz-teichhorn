@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using System.Data;
 
-public class MAnager2 : MonoBehaviour
+public class MAnagerProbieren : MonoBehaviour
 {
     public Button genNum;
     public TMP_Text Number;
@@ -62,7 +62,7 @@ public class MAnager2 : MonoBehaviour
                 rightNumber.text = "";
                 wrongNumber.text = "";
 
-                if (rNumber % 3 == 0 && rNumber % 5 != 0)
+                if (rNumber % 3 == 0)
                 {
                     rightNumber.text = "right";
                     right.color = Color.green;
@@ -71,7 +71,7 @@ public class MAnager2 : MonoBehaviour
                 {
                     wrongNumber.text = "wrong";
                     right.color = Color.red;
-                    infoTxt.text = "Eine Zahl ist durch 3 teilbar, wenn ihre Quersumme, das heißt die Summe ihrer Ziffern, durch 3 teilbar ist. Falls dies zutrifft liegt es daran, dass die Zahl durch 3&5 teilbar ist!";
+                    infoTxt.text = "Eine Zahl ist durch 3 teilbar, wenn ihre Quersumme, das heißt die Summe ihrer Ziffern, durch 3 teilbar ist.";
                 }
                 arrowKeysActive = false;
             }
@@ -81,7 +81,7 @@ public class MAnager2 : MonoBehaviour
                 rightNumber.text = "";
                 wrongNumber.text = "";
 
-                if (rNumber % 5 == 0 && rNumber % 3 != 0)
+                if (rNumber % 5 == 0)
                 {
                     rightNumber.text = "right";
                     right.color = Color.green;
@@ -90,7 +90,7 @@ public class MAnager2 : MonoBehaviour
                 {
                     wrongNumber.text = "wrong";
                     right.color = Color.red;
-                    infoTxt.text = "Eine Zahl ist durch 5 teilbar, wenn die letzte Ziffer eine 0 oder 5 ist. Falls dies zutrifft liegt es daran, dass die Zahl durch 3&5 teilbar ist!";
+                    infoTxt.text = "Eine Zahl ist durch 5 teilbar, wenn die letzte Ziffer eine 0 oder 5 ist.";
                 }
                 arrowKeysActive = false;
             }
@@ -110,7 +110,6 @@ public class MAnager2 : MonoBehaviour
                 {
                     wrongNumber.text = "wrong";
                     right.color = Color.red;
-                    infoTxt.text = "Diese Zahl erfüllt eine der teilbarkeitsregeln!";
                 }
                 arrowKeysActive = false;
             }
