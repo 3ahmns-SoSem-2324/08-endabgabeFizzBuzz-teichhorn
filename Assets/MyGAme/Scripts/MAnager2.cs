@@ -13,11 +13,14 @@ public class MAnager2 : MonoBehaviour
     public TMP_Text rightNumber;
     public TMP_Text wrongNumber;
     public TMP_Text infoTxt;
+    // Neues Textfeld für Game Over Nachricht
     int rNumber;
     public Image right;
     public Image wrong;
+    public TMP_Text gameOver;
 
     private bool arrowKeysActive = true;
+    private int wrongAnswers = 0; // Zähler für falsche Antworten
 
     // Update is called once per frame
     void Update()
@@ -34,10 +37,17 @@ public class MAnager2 : MonoBehaviour
             right.color = Color.white;
             wrong.color = Color.white;
             arrowKeysActive = true;
+            gameOver.text = ""; // Game Over Nachricht zurücksetzen
+            wrongAnswers = 0; // Zähler zurücksetzen
         }
 
         if (arrowKeysActive)
         {
+            if (wrongAnswers >= 3)
+            {
+                gameOver.text = "Game Over";
+                arrowKeysActive = false; // Deaktiviert alle Eingaben
+            }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 rightNumber.text = "";
@@ -53,6 +63,7 @@ public class MAnager2 : MonoBehaviour
                     wrongNumber.text = "wrong";
                     right.color = Color.red;
                     infoTxt.text = "Eine Zahl ist durch 3 + 5 teilbar wenn die Quersumme durch 3 teilbar ist und die letzte Zahl 0 oder 5 ist.";
+                    wrongAnswers++;
                 }
                 arrowKeysActive = false;
             }
@@ -71,7 +82,8 @@ public class MAnager2 : MonoBehaviour
                 {
                     wrongNumber.text = "wrong";
                     right.color = Color.red;
-                    infoTxt.text = "Eine Zahl ist durch 3 teilbar, wenn ihre Quersumme, das heißt die Summe ihrer Ziffern, durch 3 teilbar ist. Falls dies zutrifft liegt es daran, dass die Zahl durch 3&5 teilbar ist!";
+                    infoTxt.text = "Eine Zahl ist durch 3 teilbar, wenn ihre Quersumme, das heißt die Summe ihrer Ziffern, durch 3 teilbar ist.";
+                    wrongAnswers++;
                 }
                 arrowKeysActive = false;
             }
@@ -90,7 +102,8 @@ public class MAnager2 : MonoBehaviour
                 {
                     wrongNumber.text = "wrong";
                     right.color = Color.red;
-                    infoTxt.text = "Eine Zahl ist durch 5 teilbar, wenn die letzte Ziffer eine 0 oder 5 ist. Falls dies zutrifft liegt es daran, dass die Zahl durch 3&5 teilbar ist!";
+                    infoTxt.text = "Eine Zahl ist durch 5 teilbar, wenn die letzte Ziffer eine 0 oder 5 ist.";
+                    wrongAnswers++;
                 }
                 arrowKeysActive = false;
             }
@@ -110,10 +123,13 @@ public class MAnager2 : MonoBehaviour
                 {
                     wrongNumber.text = "wrong";
                     right.color = Color.red;
-                    infoTxt.text = "Diese Zahl erfüllt eine der teilbarkeitsregeln!";
+                    wrongAnswers++;
                 }
                 arrowKeysActive = false;
             }
+
+            
+           
         }
     }
 }
