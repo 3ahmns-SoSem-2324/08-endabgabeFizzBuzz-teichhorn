@@ -977,7 +977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 'Remaining Attemps: 3'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2063,6 +2063,7 @@ MonoBehaviour:
   scoreText: {fileID: 428053161}
   gameOverMessage: {fileID: 746597497}
   countdownText: {fileID: 335027504}
+  restartButton: {fileID: 1240251308}
 --- !u!4 &951805880
 Transform:
   m_ObjectHideFlags: 0
@@ -2795,8 +2796,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 951805879}
-        m_TargetAssemblyTypeName: MAnager2, Assembly-CSharp
-        m_MethodName: Exit
+        m_TargetAssemblyTypeName: Manager2, Assembly-CSharp
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
