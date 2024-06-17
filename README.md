@@ -49,6 +49,11 @@ Methoden
 
 # Spielbeschreibung
 FizzBuzz ist ein Interaktives Mathematik Spiel in welchen man herausfinden muss, ob eine Zahl durch 3, 5 oder 3&5 teilbar ist. Für jede mögliche Antwort gibt es einen Button oder befehl mit dem man seine Antwort bestätigt. Auf dem Laptop sind es die Pfeiltasten und beim Makey Makey die Angeschlossenen Leiter. Das Spiel ist vorbei wenn man 3 mal eine Falsche Antwort gegeben hat. Ziel ist sein Mathematisches Grundwissen zu stärken und so viele Punkte wie es nur geht zu erreichen.
+Pfeiltaste nach oben = Fizz
+Pfeiltaste nach unten = FizzBuzz
+Pfeiltaste nach rechts = nix
+Pfeiltaste nach links = Buzz
+Leertaste = Zahl überspringen/nächste Zahl
 # Anleitung
 Ohne Makey Makey:
                -   Drücke Leertaste zum generieren einer Zahl
