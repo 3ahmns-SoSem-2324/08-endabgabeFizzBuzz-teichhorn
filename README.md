@@ -1,6 +1,9 @@
 # Enabgabe Fizz Buzz
 # von: 08-Thomas Eichhorn-teichhorn
 
+Scene: FizzBuzz
+Script: MAnager2
+
 Variablen und Objekte
 
 1. Public Variablen und Objekte
@@ -43,9 +46,23 @@ Methoden
 8. StartNewGame()
    - Generiert eine neue Zufallszahl, aktualisiert die angezeigte Nummer und die Info-Texte, setzt die Antwort-Anzeige zurück und aktiviert die Pfeiltasten für die Eingabe.
 
-Zusammenfassung
 
-Das Skript verwaltet die Logik für ein interaktives Spiel, in dem der Spieler die Zahlen auf Bildschirmtasten drückt und überprüft, ob sie den FizzBuzz-Regeln entsprechen. Es zeigt den aktuellen Punktestand an, zählt die falschen Antworten und die verbleibenden Versuche bis zum Spielende. Der Spieler kann das Spiel neu starten oder beenden und erhält Feedback über seine Antworten in Echtzeit.
+# Spielbeschreibung
+FizzBuzz ist ein Interaktives Mathematik Spiel in welchen man herausfinden muss, ob eine Zahl durch 3, 5 oder 3&5 teilbar ist. Für jede mögliche Antwort gibt es einen Button oder befehl mit dem man seine Antwort bestätigt. Auf dem Laptop sind es die Pfeiltasten und beim Makey Makey die Angeschlossenen Leiter. Das Spiel ist vorbei wenn man 3 mal eine Falsche Antwort gegeben hat. Ziel ist sein Mathematisches Grundwissen zu stärken und so viele Punkte wie es nur geht zu erreichen.
+# Anleitung
+Ohne Makey Makey:
+               -   Drücke Leertaste zum generieren einer Zahl
+               -   Drücke dann die richtige Pfeiltaste (Funktion dieser im Game beschrieben)
+               -   Spiele so lang, bis zu 3 Mal falsch geraten hast
+               -   Restarte danch das spiel oder beende es
+
+Mit Makey Makey:
+               -   Zuerst Makey Makey an den Computer anstecken
+               -   dann die Klammern an der Platine und an Leitenden Gegenständen befestigen
+               -   eine klmmer us am unteren rand befestigt und in der hand gehalten werden
+               -   Jetzt ist es einem möglich das Spiel zu Spielen
+               -   Die angeschlossenen Gegenstände ersetzen die Pfeiltasten
+               -   der Rest bleibt Gleich
 # 08-endabgabeFizzBuzz-teichhorn
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet 
